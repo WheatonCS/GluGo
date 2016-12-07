@@ -1,6 +1,8 @@
 CONTENT OF THIS FILE:
 -------------------------------------------------------------------------------
 
+-README.md - this file
+
 -dataAccess.py
 
 -flaskServer.py
