@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flask Server Test Interface</title>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#textField").text("Ready to go");
+});
+
+var updateRow = function() {
+	var inCol = $("#fileSelect").val();
+	var patientName = $("#patient").val();	//get PID
+	var IPAdress = $("#IPAdress").val();	//get IP
+	var URL = "http://" + IPAdress + ":5000/" + patientName + "/updateRow"; //make url
+
+	//open a web request
+	$.ajax({
+			url: URL,
+			type: "POST", //you'll use "POST" because you're sending info AND getting info
+			timeout: 2000,
+			crossDomain: true,
+			contentType: 'application/json',
+			data: inCol,	//attach the data, don't need to 'jsonify' because we are assuming the string is already in valid json format
+		}).done(function(data){ //this is what happens if http status==200
+			console.log(JSON.stringify(data));
+			alert(JSON.stringify(data));
+		}).fail(function (data){ //else run this function
+			console.log(JSON.stringify(data));
+			alert(JSON.stringify(data));		
+		});
+};
+
+var addColumn = function() {
+	var patientName = $("#patient").val();	//get PID
+	var IPAdress = $("#IPAdress").val();	//get IP
+	var URL = "http://" + IPAdress + ":5000/" + patientName + "/addColumn"; //make url
+
+	//here is where you need to get the name of the file from the "#fileSelect" <input> tag
+
+	//then open the file (assume that it is going to contain a valid JSON)
+			//you'll need to make this JSON yourselves and be prepared to explain how it is formatted to the class
+	var inCol = $("#fileSelect").val();
+
+	//open a web request
+	$.ajax({
+			url: URL,
+			type: "POST", //you'll use "POST" because you're sending info AND getting info
+			crossDomain: true,
+			crossOrigin:true,
+			contentType: 'application/json',
+			data: inCol,	//attach the data, don't need to 'jsonify' because we are assuming the string is already in valid json format
+			timeout: 2000,
+			headers: {
+				"Access-Control-Allow-Headers": "x-requested-with", 
+				"Access-Control-Allow-Origin": "http://localhost:5000"
+			}
+		})
+		.done(function(data){ //this is what happens if http status==200
+			console.log(JSON.stringify(data));
+			alert(JSON.stringify(data));
+		})
+		.fail(function (data){ //else run this function
+			console.log(JSON.stringify(data));
+			alert(JSON.stringify(data));		
+		});
+};
+
+var getData = function() {
+	var patientName = $("#patient").val();	//get PID
+	var IPAdress = $("#IPAdress").val();	//get IP
+	var URL = "http://" + IPAdress + ":5000/" + patientName + "/getData"; //make url
+
+	//open a web request
+	$.ajax({
+			url: URL,
+			type: "GET", 
+			timeout: 2000,
+			crossDomain: true,
+			crossOrigin: true
+		}).done(function(data){ //this is what happens if http status==200
+			$("#textField").text(JSON.stringify(data));
+			//alert(JSON.stringify(data));
+		}).fail(function (data){ //else run this function
+			$("#testField").text(JSON.stringify(data));
+			//alert(JSON.stringify(data));		
+		});
+};
+
+var sendCSV = function() {
+	var formData = new FormData()
+};
+
+var getColumnNames = function() {
+	var patientName = $("#patient").val();	//get PID
+	var IPAdress = $("#IPAdress").val();	//get IP
+	var URL = "http://" + IPAdress + ":5000/" + patientName + "/getColumnNames"; //make url
+
+	$.ajax({
+			url: URL,
+			type: "GET", 
+			timeout: 2000,
+			crossDomain: true,
+			crossOrigin: true
+		}).done(function(data){ //this is what happens if http status==200
+			console.log(JSON.stringify(data));
+			alert(JSON.stringify(data));
+		}).fail(function (data){ //else run this function
+			console.log(JSON.stringify(data));
+			alert(JSON.stringify(data));		
+		});
+};
+</script>
+<style type="text/css">
+	#topbar {
+		height: 80px;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		/*z-index: 999;*/
+		background-color: #000099;
+		border-bottom: 2px solid #000000;
+	}
+
+	#responseContent {
+		position: fixed;
+		top: 82px;
+		height: calc(100% - 80px);
+		width: 100%;
+		overflow: scroll;
+	}
+
+	input {
+		margin: 2px;
+	}
+</style>
+</head>
+
+<body style="width: 100%;height: 100%;margin: 0px;">
+	<div id="topbar">
+		<input type="text" id="patient" placeholder="patient">
+		<input type="file" id="fileSelect" placeholder="fileSelect">
+		<input type="text" id="IPAdress" placeholder="IPAdress">
+		<br><br>
+		<input type="button" value="getData" onclick="getData()">
+		<input type="button" value="addCol" onclick="addColumn()">
+		<input type="button" value="updateRow" onclick="updateRow()">
+		<input type="button" value="insertCSV">
+		<input type="button" value="getColNames" onclick="getColumnNames()">
+	</div>
+	<div id="responseContent">
+		<text id="textField">Not Ready</text>
+	</div>
+</body>
+</html>
