@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
+
+	<head>
+	  <meta charset="utf-8">
+	  <title>GluGo/myReports</title>
+	  <link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+
+	<body class="reports-body">
+		<header class="reportsheader">
+			<nav><ul>
+				<li>
+					<h1 style="float: left; margin: 0px; margin-top: 10px; text-align: center; position: relative; font-size: 45px; color: #4596d7;">GluGo</h1>
+				</li>
+				<li class="header-list">
+					<a>
+						<img class="logo-img" src="img/GluGo.png">
+					</a>
+				</li>
+				<li><a href="index.html" class="button">Home</a></li>
+				<li><a href="#tutorial" class="button">Tutorial</a></li>
+				<li><a href="#profile" class="button">Profile</a></li>
+				<li><a href="#linegraphs" class="button">Graphs</a></li>
+			</ul></nav>
+			<p style="clear:both">
+		</header>
+		<div class="header-background"></div>
+		<video id="tutorial" poster="img/tutorial.jpg" class="reports-video" onclick="this.paused?this.play():this.pause();" controls>
+			<source src="report_demo.mp4" type="video/mp4">
+			<source src="report_demo.ogg" type="video/ogg">
+			Your browser does not support HTML5 video.
+		</video>
+		<hr>
+		<div id="profile" class="profile">
+			<img class="profile-img" src="img/profilepic.svg">
+			<h2 class="profile-title">Patient Info</h2>
+				<p class="patient-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a fringilla justo. Donec placerat nunc vel congue aliquet. Nulla vestibulum orci rhoncus consequat varius. Quisque ac magna ut sapien consequat pellentesque. Mauris nec aliquam tellus. Phasellus nec lectus vel nisl hendrerit pretium sit amet ac mauris. 
+				</p>
+		</div>
+		<hr>
+
+		<div id="linegraphs"> 
+			<a href="reports/report.html" target="_blank">
+	    		<img class="graph-img" src="img/graph-static.png" >
+	    	</a>
+		</div>
+
+		<footer class="footer">
+			<br>26 E Main St, Norton MA 02766 <br>
+			Copyright © Wheaton College <br>
+		</footer>
+	</body>
+</html>
