@@ -8,16 +8,11 @@ dbpath = "Kate.db"
 
 pidKate = "Kate"
 db = DB(pidKate, dbpath)
-datapath2= "Kate_G5_Aug8_Aug24_2016.csv"
+datapath2= "Kate.csv"
 db.insertData(datapath2)
 
 db = DB(pidKate, dbpath)
-datapath3 = "Kate_G5_July_6_Oct_3_2016.csv"
+datapath3 = "Kate2.csv"
 db.insertData(datapath3)
-
-db = DB(pidKate, dbpath)
-datapath4 = "Kate_G5_Oct_8_Oct_14.csv"
-db.insertData(datapath4)
-
 
 print("inserted data")
