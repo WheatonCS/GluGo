@@ -1,4 +1,4 @@
-CONTENT OF THIS FILE:
+CONTENT OF THIS FOLDER:
 -------------------------------------------------------------------------------
 
 -README.md - this file
