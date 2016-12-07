@@ -11,4 +11,5 @@ Katedb = DB("Kate","Kate.db")
 
 ####Step 2: Get and print the column names 
 names= Katedb.getColumnNames()
-print names
+
+print(names)
