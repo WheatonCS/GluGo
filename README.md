@@ -1,7 +1,5 @@
 ![alt text][logo]
-
 [logo]: https://github.com/WheatonCS/GluGo/blob/master/GluGo.png
-
 # GluGo
 An integrated system of personalized diabetes management software, tools, and reports for patients wearing continuous glucose monitoring devices.
 
