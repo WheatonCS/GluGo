@@ -7,7 +7,7 @@ from dataAccess import dataAccess as DB
 import datetime as DT
 
 ####Step 1: Connect to the Database by creating an instance of dataAccess
-Katedb = DB("Kate",dbpath)
+Katedb = DB("Kate","Kate.db")
 
 ####Step 2: Get and print the column names 
 names= Katedb.getColumnNames()
