@@ -13,7 +13,7 @@ Our most promising prediction algorithm requires testing on more datasets. In or
 
 #Contents of This Repository
 + 1_backEnd_Database - Programs for the construction and integration of the database
-+ 2_frontEnd_Mobile - IPhone app programs 
++ 2_frontEnd_Mobile - iPhone app programs 
 + 3_frontEnd_Reports - Programs for the visualization and interpretation of glucose data 
 + 4_backEnd_machineLearning - Glucose prediction algorithms 
 + 5_frontEnd_Website - website programs
