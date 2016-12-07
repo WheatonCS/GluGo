@@ -1,6 +1,5 @@
 from dataAccess import dataAccess as DB
 import datetime as DT
-from random import randint
 
 dbpath="Kate.db"
 
