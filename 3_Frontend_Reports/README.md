@@ -4,8 +4,6 @@ This folder contains all the code to produce the 6 different types of charts for
 - README.md - this file
 - Picture1.png - a screenshot of the main login screen
 - box.js - used to produce the boxplots
-- data.csv - parsed data
-- data.tsv
 - default_avatar.png - image to hold the default usar avatar for the users profile
 - gencal.py - this file produces the mycaldata.csv file from kb_G4_June3_July28.csv file with the necessary columns for making the graphs and with the timestamp in a python datetime object
 - gencsv.py - this file produces the mydata.csv file from kb_G4_June3_July28.csv file with the necessary columns for making the graphs and with the timestamp in a python datetime object
@@ -20,7 +18,6 @@ This folder contains all the code to produce the 6 different types of charts for
 - profile.html - webpage to produce a profile page where the user can edit their account info
 - report.html - webpage to produce the graphs
 - reportstyle.css - style definitions for webpages
-- testdata.csv
 
 # What it looks like
 The login Screen: 
