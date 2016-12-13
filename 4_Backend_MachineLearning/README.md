@@ -1,6 +1,7 @@
 # Introduction
 This folder contains the code and associated files to run the glucose prediction algorithm. 
-# Contents#### dataAccess.pyThis module contains the team's functions for interacting with the database.
+# Contents
+#### dataAccess.pyThis module contains the team's functions for interacting with the database.
 
 #### gluPredict.csv
 
