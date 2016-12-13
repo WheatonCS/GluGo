@@ -18,7 +18,7 @@ This file contains the database with the machine learning group's added columns.
 
 #### ml.py
 
-This program imports a set of sensor data from the database, generates a predicted value for each time in the data set, and and exports the predicted glucose values and the actual values to a .csv (generated gluPredict.csv).
+This program imports a set of sensor data from the database (lab.db), generates a predicted value for each time in the data set, and and exports the predicted glucose values and the actual values to a .csv (generated gluPredict.csv).
 
 #### ML_Documentation.pdf
 
