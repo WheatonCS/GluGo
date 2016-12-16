@@ -433,3 +433,12 @@
   width: 65%;
   margin-bottom: 5%;
 }
+#indexLink {
+  text-decoration: none;
+  color: #D3D3D3;
+}
+
+#reportsLink {
+  text-decoration: none;
+  color: #778899;
+}
